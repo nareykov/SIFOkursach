@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.986 ns
+From           : data0[4]
+To             : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6]
+From Clock     : --
+To Clock       : nor
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.095 ns
+From           : lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]
+To             : sf
+From Clock     : sla
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.789 ns
+From           : nand
+To             : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4]
+From Clock     : --
+To Clock       : sla
+Failed Paths   : 0
+
+Type           : Clock Setup: 'nor'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]
+To             : lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]
+From Clock     : nor
+To Clock       : nor
+Failed Paths   : 0
+
+Type           : Clock Setup: 'incs'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]
+To             : lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]
+From Clock     : incs
+To Clock       : incs
+Failed Paths   : 0
+
+Type           : Clock Setup: 'sla'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]
+To             : lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]
+From Clock     : sla
+To Clock       : sla
+Failed Paths   : 0
+
+Type           : Clock Setup: 'nand'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]
+To             : lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]
+From Clock     : nand
+To Clock       : nand
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
