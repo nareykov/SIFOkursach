@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for cpu
-Sun May 13 23:44:08 2018
+Mon May 14 00:31:04 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -11,14 +11,13 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   3. Timing Analyzer Settings
   4. Clock Settings Summary
   5. Parallel Compilation
-  6. Clock Setup: 'nand'
-  7. Clock Setup: 'sla'
-  8. Clock Setup: 'incs'
-  9. Clock Setup: 'nor'
- 10. tsu
- 11. tco
- 12. th
- 13. Timing Analyzer Messages
+  6. Clock Setup: 'pop'
+  7. Clock Setup: 'push'
+  8. Clock Setup: 'clk'
+  9. tsu
+ 10. tco
+ 11. th
+ 12. Timing Analyzer Messages
 
 
 
@@ -41,20 +40,19 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                                                              ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                                      ; To                                                        ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 3.986 ns                                       ; data0[4]                                                  ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; --         ; nor      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 11.095 ns                                      ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sf                                                        ; sla        ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; 1.789 ns                                       ; nand                                                      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; --         ; sla      ; 0            ;
-; Clock Setup: 'nor'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; nor        ; nor      ; 0            ;
-; Clock Setup: 'incs'          ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; incs       ; incs     ; 0            ;
-; Clock Setup: 'sla'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sla        ; sla      ; 0            ;
-; Clock Setup: 'nand'          ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; nand       ; nand     ; 0            ;
-; Total number of failed paths ;       ;               ;                                                ;                                                           ;                                                           ;            ;          ; 0            ;
-+------------------------------+-------+---------------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                        ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.036 ns                                       ; push                                                                                   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; --         ; push     ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.421 ns                                       ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; sp[0]                                                                                  ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.232 ns                                      ; push                                                                                   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk        ; clk      ; 0            ;
+; Clock Setup: 'push'          ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push       ; push     ; 0            ;
+; Clock Setup: 'pop'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop        ; pop      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                                                        ;                                                                                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -94,10 +92,9 @@ applicable agreement for further details.
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
-; nand            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; sla             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; incs            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; nor             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; pop             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; push            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
 
@@ -112,502 +109,112 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'nand'                                                                                                                                                                                                                                                                       ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                                      ; To                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0] ; nand       ; nand     ; None                        ; None                      ; 0.258 ns                ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'pop'                                                                                                                                                                                                                                                                                                                                   ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop        ; pop      ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop        ; pop      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; pop        ; pop      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop        ; pop      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; pop        ; pop      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; pop        ; pop      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop        ; pop      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; pop        ; pop      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; pop        ; pop      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; pop        ; pop      ; None                        ; None                      ; 0.609 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'sla'                                                                                                                                                                                                                                                                        ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                                      ; To                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0] ; sla        ; sla      ; None                        ; None                      ; 0.258 ns                ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'push'                                                                                                                                                                                                                                                                                                                                  ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push       ; push     ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push       ; push     ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; push       ; push     ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push       ; push     ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; push       ; push     ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; push       ; push     ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push       ; push     ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; push       ; push     ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; push       ; push     ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; push       ; push     ; None                        ; None                      ; 0.609 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'incs'                                                                                                                                                                                                                                                                       ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                                      ; To                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0] ; incs       ; incs     ; None                        ; None                      ; 0.258 ns                ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                                                   ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk        ; clk      ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk        ; clk      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; clk        ; clk      ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk        ; clk      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; clk        ; clk      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; clk        ; clk      ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk        ; clk      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; clk        ; clk      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; clk        ; clk      ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; clk        ; clk      ; None                        ; None                      ; 0.609 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'nor'                                                                                                                                                                                                                                                                        ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                                      ; To                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0] ; nor        ; nor      ; None                        ; None                      ; 0.258 ns                ;
-+-------+------------------------------------------------+-----------------------------------------------------------+----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                          ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                                                                                     ; To Clock ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 1.036 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push     ;
+; N/A   ; None         ; 1.001 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; push     ;
+; N/A   ; None         ; 0.938 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; push     ;
+; N/A   ; None         ; 0.828 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop      ;
+; N/A   ; None         ; 0.793 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; pop      ;
+; N/A   ; None         ; 0.730 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; pop      ;
+; N/A   ; None         ; 0.570 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk      ;
+; N/A   ; None         ; 0.535 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; clk      ;
+; N/A   ; None         ; 0.472 ns   ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; clk      ;
++-------+--------------+------------+------+----------------------------------------------------------------------------------------+----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; tsu                                                                                                                                                                                          ;
-+-----------------------------------------+-----------------------------------------------------+------------+----------+-----------------------------------------------------------+----------+
-; Slack                                   ; Required tsu                                        ; Actual tsu ; From     ; To                                                        ; To Clock ;
-+-----------------------------------------+-----------------------------------------------------+------------+----------+-----------------------------------------------------------+----------+
-; N/A                                     ; None                                                ; 3.986 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.903 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.897 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.851 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 3.814 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.794 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 3.773 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.763 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.762 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 3.753 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.705 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 3.684 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.674 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.670 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.664 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.635 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.630 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 3.626 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.621 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.617 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 3.608 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 3.581 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.578 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.567 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 3.546 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.543 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.541 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 3.538 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.534 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.528 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 3.524 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.519 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 3.514 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.512 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.491 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 3.489 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.486 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 3.478 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 3.445 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.435 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.434 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 3.429 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.429 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 3.425 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.423 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.413 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.413 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.409 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 3.408 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.403 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.398 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.393 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.388 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.351 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 3.340 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.324 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.320 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 3.310 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.307 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 3.305 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.275 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.270 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 3.270 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.265 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 3.262 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 3.257 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 3.252 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 3.250 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 3.248 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; 3.243 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; 3.218 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 3.218 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.213 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.207 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 3.207 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; 3.202 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 3.174 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 3.169 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 3.164 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 3.161 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.161 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 3.159 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 3.154 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 3.152 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 3.149 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 3.147 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 3.118 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; 3.104 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 3.101 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 3.074 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 3.072 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.069 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 3.064 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 3.053 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 3.049 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; 3.048 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 3.044 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; 3.024 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 3.023 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 3.015 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 3.014 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 3.012 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 3.004 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.992 ns   ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; 2.991 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.991 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 2.986 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 2.985 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.955 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 2.947 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 2.947 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; 2.942 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 2.935 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.934 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 2.925 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.925 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; 2.915 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.903 ns   ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; 2.902 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.890 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 2.885 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 2.877 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; 2.866 ns   ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 2.866 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 2.858 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; 2.847 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; 2.842 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; 2.836 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; 2.801 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 2.796 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 2.793 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.788 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 2.777 ns   ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 2.744 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 2.741 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 2.739 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 2.736 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 2.723 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.714 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.709 ns   ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.704 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.698 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; 2.693 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 2.683 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 2.673 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 2.666 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.664 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.663 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 2.659 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.658 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 2.654 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.649 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.649 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 2.644 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.639 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.639 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 2.634 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.632 ns   ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 2.631 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.629 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 2.627 ns   ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 2.626 ns   ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.609 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; 2.604 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 2.595 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 2.594 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 2.590 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 2.587 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; 2.584 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 2.582 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; 2.577 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.565 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; 2.560 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 2.560 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; 2.550 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 2.540 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 2.517 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.517 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 2.512 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 2.506 ns   ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; 2.501 ns   ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; 2.439 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.433 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.428 ns   ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.428 ns   ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.403 ns   ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 2.363 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.358 ns   ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 2.350 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.338 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; 2.333 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 2.333 ns   ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; 2.328 ns   ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 2.323 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 2.318 ns   ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 2.314 ns   ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 2.313 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 2.308 ns   ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 2.306 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 2.301 ns   ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;          ;                                                           ;          ;
-+-----------------------------------------+-----------------------------------------------------+------------+----------+-----------------------------------------------------------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                             ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                   ; To    ; From Clock ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
+; N/A   ; None         ; 8.421 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; sp[0] ; clk        ;
+; N/A   ; None         ; 8.401 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; sp[2] ; clk        ;
+; N/A   ; None         ; 8.163 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; sp[0] ; pop        ;
+; N/A   ; None         ; 8.143 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; sp[2] ; pop        ;
+; N/A   ; None         ; 8.105 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; sp[3] ; clk        ;
+; N/A   ; None         ; 8.054 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; sp[1] ; clk        ;
+; N/A   ; None         ; 7.955 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0] ; sp[0] ; push       ;
+; N/A   ; None         ; 7.935 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; sp[2] ; push       ;
+; N/A   ; None         ; 7.847 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; sp[3] ; pop        ;
+; N/A   ; None         ; 7.796 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; sp[1] ; pop        ;
+; N/A   ; None         ; 7.639 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; sp[3] ; push       ;
+; N/A   ; None         ; 7.588 ns   ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; sp[1] ; push       ;
++-------+--------------+------------+----------------------------------------------------------------------------------------+-------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; tco                                                                                                                    ;
-+-------+--------------+------------+-----------------------------------------------------------+-----------+------------+
-; Slack ; Required tco ; Actual tco ; From                                                      ; To        ; From Clock ;
-+-------+--------------+------------+-----------------------------------------------------------+-----------+------------+
-; N/A   ; None         ; 11.095 ns  ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sf        ; sla        ;
-; N/A   ; None         ; 11.090 ns  ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sf        ; incs       ;
-; N/A   ; None         ; 10.819 ns  ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sf        ; nand       ;
-; N/A   ; None         ; 10.730 ns  ; lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]  ; sf        ; nor        ;
-; N/A   ; None         ; 8.752 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; result[1] ; sla        ;
-; N/A   ; None         ; 8.747 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; result[1] ; incs       ;
-; N/A   ; None         ; 8.547 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; result[0] ; sla        ;
-; N/A   ; None         ; 8.542 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; result[0] ; incs       ;
-; N/A   ; None         ; 8.476 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; result[1] ; nand       ;
-; N/A   ; None         ; 8.387 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; result[1] ; nor        ;
-; N/A   ; None         ; 8.380 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; result[5] ; sla        ;
-; N/A   ; None         ; 8.375 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; result[5] ; incs       ;
-; N/A   ; None         ; 8.271 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; result[0] ; nand       ;
-; N/A   ; None         ; 8.182 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; result[0] ; nor        ;
-; N/A   ; None         ; 8.104 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; result[5] ; nand       ;
-; N/A   ; None         ; 8.015 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; result[5] ; nor        ;
-; N/A   ; None         ; 7.993 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; result[4] ; sla        ;
-; N/A   ; None         ; 7.988 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; result[4] ; incs       ;
-; N/A   ; None         ; 7.717 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; result[4] ; nand       ;
-; N/A   ; None         ; 7.680 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; result[3] ; sla        ;
-; N/A   ; None         ; 7.675 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; result[3] ; incs       ;
-; N/A   ; None         ; 7.628 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; result[4] ; nor        ;
-; N/A   ; None         ; 7.605 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; result[2] ; sla        ;
-; N/A   ; None         ; 7.600 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; result[2] ; incs       ;
-; N/A   ; None         ; 7.530 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; result[7] ; sla        ;
-; N/A   ; None         ; 7.525 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; result[7] ; incs       ;
-; N/A   ; None         ; 7.404 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; result[3] ; nand       ;
-; N/A   ; None         ; 7.329 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; result[2] ; nand       ;
-; N/A   ; None         ; 7.315 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; result[3] ; nor        ;
-; N/A   ; None         ; 7.280 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; result[6] ; sla        ;
-; N/A   ; None         ; 7.275 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; result[6] ; incs       ;
-; N/A   ; None         ; 7.254 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; result[7] ; nand       ;
-; N/A   ; None         ; 7.240 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; result[2] ; nor        ;
-; N/A   ; None         ; 7.165 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; result[7] ; nor        ;
-; N/A   ; None         ; 7.004 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; result[6] ; nand       ;
-; N/A   ; None         ; 6.915 ns   ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; result[6] ; nor        ;
-+-------+--------------+------------+-----------------------------------------------------------+-----------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; th                                                                                                                                                                                          ;
-+-----------------------------------------+-----------------------------------------------------+-----------+----------+-----------------------------------------------------------+----------+
-; Minimum Slack                           ; Required th                                         ; Actual th ; From     ; To                                                        ; To Clock ;
-+-----------------------------------------+-----------------------------------------------------+-----------+----------+-----------------------------------------------------------+----------+
-; N/A                                     ; None                                                ; 1.789 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 1.784 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 1.574 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; 1.569 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; 1.565 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 1.560 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 1.513 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; 1.513 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 1.508 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; 1.424 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 1.298 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; 1.298 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; 1.293 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; 1.289 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; 1.289 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 1.284 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; 1.284 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; 1.279 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; 1.237 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; 1.209 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; 1.200 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 1.148 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; 1.084 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 1.079 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 1.022 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; 1.013 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; 1.008 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; 1.008 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 1.003 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; 0.933 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; 0.924 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; 0.919 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 0.808 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; 0.808 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 0.803 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; 0.732 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; 0.719 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 0.643 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; 0.532 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; 0.443 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; 0.395 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 0.390 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 0.119 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; 0.119 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; 0.114 ns  ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; 0.042 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; 0.037 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; 0.030 ns  ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; -0.157 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; -0.234 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; -0.234 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; -0.239 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; -0.246 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; -0.323 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; -0.340 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; -0.345 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; -0.510 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nand     ;
-; N/A                                     ; None                                                ; -0.599 ns ; sla      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; nor      ;
-; N/A                                     ; None                                                ; -0.616 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; -0.627 ns ; data1[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -0.632 ns ; data1[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -0.662 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; -0.667 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; -0.702 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; -0.705 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; -0.707 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; -0.721 ns ; data1[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; -0.726 ns ; data1[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; -0.732 ns ; data1[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; -0.737 ns ; data1[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; -0.797 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; -0.802 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; -0.813 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; -0.818 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; -0.898 ns ; data1[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; -0.903 ns ; data1[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; -0.903 ns ; data1[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -0.904 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; -0.909 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; -0.938 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; -0.964 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; -0.969 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; -0.978 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; -0.992 ns ; data1[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -0.997 ns ; data1[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; -1.001 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; -1.006 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; -1.008 ns ; data1[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; -1.027 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; -1.037 ns ; nor      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; -1.042 ns ; nor      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; -1.042 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; -1.047 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; -1.067 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; -1.073 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; -1.074 ns ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.079 ns ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.086 ns ; data1[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; -1.089 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; -1.097 ns ; data1[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; -1.100 ns ; data1[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -1.102 ns ; data1[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; -1.105 ns ; data1[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; -1.107 ns ; data1[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; -1.119 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; -1.124 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; -1.162 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; -1.174 ns ; data1[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; -1.178 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; -1.180 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; -1.240 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; -1.241 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; -1.246 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; -1.263 ns ; data1[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; -1.269 ns ; nand     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; -1.277 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; -1.283 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; -1.288 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; -1.313 ns ; nor      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; -1.318 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; -1.329 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; -1.350 ns ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -1.361 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.362 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; sla      ;
-; N/A                                     ; None                                                ; -1.366 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.366 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; -1.367 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; incs     ;
-; N/A                                     ; None                                                ; -1.376 ns ; data1[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nand     ;
-; N/A                                     ; None                                                ; -1.378 ns ; data1[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; -1.395 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; -1.402 ns ; nor      ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; -1.407 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; -1.439 ns ; data0[7] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -1.465 ns ; data1[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; nor      ;
-; N/A                                     ; None                                                ; -1.467 ns ; data1[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; -1.476 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.481 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.484 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; -1.517 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nand     ;
-; N/A                                     ; None                                                ; -1.554 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.559 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; -1.559 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.606 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; nor      ;
-; N/A                                     ; None                                                ; -1.637 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -1.638 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nand     ;
-; N/A                                     ; None                                                ; -1.648 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; -1.703 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.708 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.726 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -1.727 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0] ; nor      ;
-; N/A                                     ; None                                                ; -1.752 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -1.760 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -1.765 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -1.830 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -1.840 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; sla      ;
-; N/A                                     ; None                                                ; -1.841 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -1.845 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; incs     ;
-; N/A                                     ; None                                                ; -1.852 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; -1.857 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; -1.896 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; sla      ;
-; N/A                                     ; None                                                ; -1.901 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; incs     ;
-; N/A                                     ; None                                                ; -1.919 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -1.979 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -2.028 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -2.033 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -2.036 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -2.041 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -2.046 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -2.068 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -2.080 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -2.085 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; -2.089 ns ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; sla      ;
-; N/A                                     ; None                                                ; -2.094 ns ; data1[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; incs     ;
-; N/A                                     ; None                                                ; -2.096 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -2.101 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; -2.111 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; sla      ;
-; N/A                                     ; None                                                ; -2.116 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; incs     ;
-; N/A                                     ; None                                                ; -2.116 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nand     ;
-; N/A                                     ; None                                                ; -2.125 ns ; data0[2] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nor      ;
-; N/A                                     ; None                                                ; -2.126 ns ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; -2.127 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; sla      ;
-; N/A                                     ; None                                                ; -2.128 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nand     ;
-; N/A                                     ; None                                                ; -2.131 ns ; data1[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; -2.132 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4] ; incs     ;
-; N/A                                     ; None                                                ; -2.172 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nand     ;
-; N/A                                     ; None                                                ; -2.174 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -2.179 ns ; data0[3] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; -2.205 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; -2.205 ns ; data0[0] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2] ; nor      ;
-; N/A                                     ; None                                                ; -2.210 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; -2.217 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1] ; nor      ;
-; N/A                                     ; None                                                ; -2.261 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3] ; nor      ;
-; N/A                                     ; None                                                ; -2.303 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -2.304 ns ; data0[5] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -2.305 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; sla      ;
-; N/A                                     ; None                                                ; -2.308 ns ; data0[4] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; N/A                                     ; None                                                ; -2.310 ns ; data0[6] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6] ; incs     ;
-; N/A                                     ; None                                                ; -2.317 ns ; incs     ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7] ; nand     ;
-; N/A                                     ; None                                                ; -2.323 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; sla      ;
-; N/A                                     ; None                                                ; -2.328 ns ; data0[1] ; lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5] ; incs     ;
-; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;          ;                                                           ;          ;
-+-----------------------------------------+-----------------------------------------------------+-----------+----------+-----------------------------------------------------------+----------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                 ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                                                                                     ; To Clock ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; -0.232 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; clk      ;
+; N/A           ; None        ; -0.233 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; clk      ;
+; N/A           ; None        ; -0.233 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; clk      ;
+; N/A           ; None        ; -0.490 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; pop      ;
+; N/A           ; None        ; -0.491 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; pop      ;
+; N/A           ; None        ; -0.491 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; pop      ;
+; N/A           ; None        ; -0.698 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3] ; push     ;
+; N/A           ; None        ; -0.699 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2] ; push     ;
+; N/A           ; None        ; -0.699 ns ; push ; lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1] ; push     ;
++---------------+-------------+-----------+------+----------------------------------------------------------------------------------------+----------+
 
 
 +--------------------------+
@@ -616,181 +223,145 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Sun May 13 23:44:08 2018
+    Info: Processing started: Mon May 14 00:31:04 2018
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off cpu -c cpu --timing_analysis_only
-Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[5]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[3]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[2]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[1]" is a latch
-    Warning: Node "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[0]" is a latch
 Warning: Found pins functioning as undefined clocks and/or memory enables
-    Info: Assuming node "nand" is a latch enable. Will not compute fmax for this pin.
-    Info: Assuming node "sla" is a latch enable. Will not compute fmax for this pin.
-    Info: Assuming node "incs" is a latch enable. Will not compute fmax for this pin.
-    Info: Assuming node "nor" is a latch enable. Will not compute fmax for this pin.
-Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected ripple clock "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]" as buffer
-    Info: Detected gated clock "inst24" as buffer
-    Info: Detected gated clock "inst24~0" as buffer
-Info: Clock "nand" Internal fmax is restricted to 500.0 MHz between source register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]" and destination register "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]"
+    Info: Assuming node "pop" is an undefined clock
+    Info: Assuming node "push" is an undefined clock
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "inst" as buffer
+Info: Clock "pop" Internal fmax is restricted to 500.0 MHz between source register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]" and destination register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]"
     Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 0.258 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-            Info: 2: + IC(0.205 ns) + CELL(0.053 ns) = 0.258 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-            Info: Total cell delay = 0.053 ns ( 20.54 % )
-            Info: Total interconnect delay = 0.205 ns ( 79.46 % )
-        Info: - Smallest clock skew is 0.171 ns
-            Info: + Shortest clock path from clock "nand" to destination register is 4.658 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U4; Fanout = 3; CLK Node = 'nand'
-                Info: 2: + IC(1.024 ns) + CELL(0.053 ns) = 1.887 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-                Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.162 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.533 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 5: + IC(0.900 ns) + CELL(0.225 ns) = 4.658 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-                Info: Total cell delay = 1.141 ns ( 24.50 % )
-                Info: Total interconnect delay = 3.517 ns ( 75.50 % )
-            Info: - Longest clock path from clock "nand" to source register is 4.487 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U4; Fanout = 3; CLK Node = 'nand'
-                Info: 2: + IC(1.024 ns) + CELL(0.053 ns) = 1.887 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-                Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.162 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.533 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 5: + IC(0.901 ns) + CELL(0.053 ns) = 4.487 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-                Info: Total cell delay = 0.969 ns ( 21.60 % )
-                Info: Total interconnect delay = 3.518 ns ( 78.40 % )
-        Info: + Micro clock to output delay of source is 0.000 ns
-        Info: + Micro setup delay of destination is 0.698 ns
-Info: Clock "sla" Internal fmax is restricted to 500.0 MHz between source register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]" and destination register "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]"
+        Info: + Longest register to register delay is 0.750 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+            Info: 2: + IC(0.000 ns) + CELL(0.458 ns) = 0.458 ns; Loc. = LCCOMB_X18_Y1_N16; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0~COUT'
+            Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 0.493 ns; Loc. = LCCOMB_X18_Y1_N18; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1~COUT'
+            Info: 4: + IC(0.000 ns) + CELL(0.035 ns) = 0.528 ns; Loc. = LCCOMB_X18_Y1_N20; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita2~COUT'
+            Info: 5: + IC(0.000 ns) + CELL(0.125 ns) = 0.653 ns; Loc. = LCCOMB_X18_Y1_N22; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita3'
+            Info: 6: + IC(0.000 ns) + CELL(0.097 ns) = 0.750 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+            Info: Total cell delay = 0.750 ns ( 100.00 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "pop" to destination register is 4.344 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_Y2; Fanout = 1; CLK Node = 'pop'
+                Info: 2: + IC(1.130 ns) + CELL(0.053 ns) = 2.013 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.082 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.344 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+                Info: Total cell delay = 1.501 ns ( 34.55 % )
+                Info: Total interconnect delay = 2.843 ns ( 65.45 % )
+            Info: - Longest clock path from clock "pop" to source register is 4.344 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_Y2; Fanout = 1; CLK Node = 'pop'
+                Info: 2: + IC(1.130 ns) + CELL(0.053 ns) = 2.013 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.082 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.344 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+                Info: Total cell delay = 1.501 ns ( 34.55 % )
+                Info: Total interconnect delay = 2.843 ns ( 65.45 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Info: Clock "push" Internal fmax is restricted to 500.0 MHz between source register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]" and destination register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]"
     Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 0.258 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-            Info: 2: + IC(0.205 ns) + CELL(0.053 ns) = 0.258 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-            Info: Total cell delay = 0.053 ns ( 20.54 % )
-            Info: Total interconnect delay = 0.205 ns ( 79.46 % )
-        Info: - Smallest clock skew is 0.171 ns
-            Info: + Shortest clock path from clock "sla" to destination register is 4.934 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA5; Fanout = 2; CLK Node = 'sla'
-                Info: 2: + IC(1.081 ns) + CELL(0.225 ns) = 2.163 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-                Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.438 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.809 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 5: + IC(0.900 ns) + CELL(0.225 ns) = 4.934 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-                Info: Total cell delay = 1.360 ns ( 27.56 % )
-                Info: Total interconnect delay = 3.574 ns ( 72.44 % )
-            Info: - Longest clock path from clock "sla" to source register is 4.763 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA5; Fanout = 2; CLK Node = 'sla'
-                Info: 2: + IC(1.081 ns) + CELL(0.225 ns) = 2.163 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-                Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.438 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.809 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 5: + IC(0.901 ns) + CELL(0.053 ns) = 4.763 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-                Info: Total cell delay = 1.188 ns ( 24.94 % )
-                Info: Total interconnect delay = 3.575 ns ( 75.06 % )
-        Info: + Micro clock to output delay of source is 0.000 ns
-        Info: + Micro setup delay of destination is 0.698 ns
-Info: Clock "incs" Internal fmax is restricted to 500.0 MHz between source register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]" and destination register "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]"
+        Info: + Longest register to register delay is 0.750 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+            Info: 2: + IC(0.000 ns) + CELL(0.458 ns) = 0.458 ns; Loc. = LCCOMB_X18_Y1_N16; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0~COUT'
+            Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 0.493 ns; Loc. = LCCOMB_X18_Y1_N18; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1~COUT'
+            Info: 4: + IC(0.000 ns) + CELL(0.035 ns) = 0.528 ns; Loc. = LCCOMB_X18_Y1_N20; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita2~COUT'
+            Info: 5: + IC(0.000 ns) + CELL(0.125 ns) = 0.653 ns; Loc. = LCCOMB_X18_Y1_N22; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita3'
+            Info: 6: + IC(0.000 ns) + CELL(0.097 ns) = 0.750 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+            Info: Total cell delay = 0.750 ns ( 100.00 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "push" to destination register is 4.136 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_AB13; Fanout = 6; CLK Node = 'push'
+                Info: 2: + IC(0.842 ns) + CELL(0.154 ns) = 1.805 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 2.874 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.136 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+                Info: Total cell delay = 1.581 ns ( 38.23 % )
+                Info: Total interconnect delay = 2.555 ns ( 61.77 % )
+            Info: - Longest clock path from clock "push" to source register is 4.136 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_AB13; Fanout = 6; CLK Node = 'push'
+                Info: 2: + IC(0.842 ns) + CELL(0.154 ns) = 1.805 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 2.874 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.136 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+                Info: Total cell delay = 1.581 ns ( 38.23 % )
+                Info: Total interconnect delay = 2.555 ns ( 61.77 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Info: Clock "clk" Internal fmax is restricted to 500.0 MHz between source register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]" and destination register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]"
     Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 0.258 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-            Info: 2: + IC(0.205 ns) + CELL(0.053 ns) = 0.258 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-            Info: Total cell delay = 0.053 ns ( 20.54 % )
-            Info: Total interconnect delay = 0.205 ns ( 79.46 % )
-        Info: - Smallest clock skew is 0.171 ns
-            Info: + Shortest clock path from clock "incs" to destination register is 4.929 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U18; Fanout = 3; CLK Node = 'incs'
-                Info: 2: + IC(1.398 ns) + CELL(0.225 ns) = 2.433 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 3: + IC(1.371 ns) + CELL(0.000 ns) = 3.804 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 4: + IC(0.900 ns) + CELL(0.225 ns) = 4.929 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-                Info: Total cell delay = 1.260 ns ( 25.56 % )
-                Info: Total interconnect delay = 3.669 ns ( 74.44 % )
-            Info: - Longest clock path from clock "incs" to source register is 4.758 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U18; Fanout = 3; CLK Node = 'incs'
-                Info: 2: + IC(1.398 ns) + CELL(0.225 ns) = 2.433 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 3: + IC(1.371 ns) + CELL(0.000 ns) = 3.804 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 4: + IC(0.901 ns) + CELL(0.053 ns) = 4.758 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-                Info: Total cell delay = 1.088 ns ( 22.87 % )
-                Info: Total interconnect delay = 3.670 ns ( 77.13 % )
-        Info: + Micro clock to output delay of source is 0.000 ns
-        Info: + Micro setup delay of destination is 0.698 ns
-Info: Clock "nor" Internal fmax is restricted to 500.0 MHz between source register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]" and destination register "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]"
-    Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
-        Info: + Longest register to register delay is 0.258 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-            Info: 2: + IC(0.205 ns) + CELL(0.053 ns) = 0.258 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-            Info: Total cell delay = 0.053 ns ( 20.54 % )
-            Info: Total interconnect delay = 0.205 ns ( 79.46 % )
-        Info: - Smallest clock skew is 0.171 ns
-            Info: + Shortest clock path from clock "nor" to destination register is 4.569 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U5; Fanout = 2; CLK Node = 'nor'
-                Info: 2: + IC(1.035 ns) + CELL(0.228 ns) = 2.073 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 3: + IC(1.371 ns) + CELL(0.000 ns) = 3.444 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 4: + IC(0.900 ns) + CELL(0.225 ns) = 4.569 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-                Info: Total cell delay = 1.263 ns ( 27.64 % )
-                Info: Total interconnect delay = 3.306 ns ( 72.36 % )
-            Info: - Longest clock path from clock "nor" to source register is 4.398 ns
-                Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U5; Fanout = 2; CLK Node = 'nor'
-                Info: 2: + IC(1.035 ns) + CELL(0.228 ns) = 2.073 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-                Info: 3: + IC(1.371 ns) + CELL(0.000 ns) = 3.444 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-                Info: 4: + IC(0.901 ns) + CELL(0.053 ns) = 4.398 ns; Loc. = LCCOMB_X34_Y3_N14; Fanout = 2; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[7]'
-                Info: Total cell delay = 1.091 ns ( 24.81 % )
-                Info: Total interconnect delay = 3.307 ns ( 75.19 % )
-        Info: + Micro clock to output delay of source is 0.000 ns
-        Info: + Micro setup delay of destination is 0.698 ns
-Info: tsu for register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6]" (data pin = "data0[4]", clock pin = "nor") is 3.986 ns
-    Info: + Longest pin to register delay is 7.876 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.799 ns) = 0.799 ns; Loc. = PIN_Y10; Fanout = 4; PIN Node = 'data0[4]'
-        Info: 2: + IC(4.797 ns) + CELL(0.309 ns) = 5.905 ns; Loc. = LCCOMB_X34_Y3_N24; Fanout = 2; COMB Node = 'lpm_add_sub0:inst8|lpm_add_sub:lpm_add_sub_component|add_sub_2ph:auto_generated|op_1~18'
-        Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 5.940 ns; Loc. = LCCOMB_X34_Y3_N26; Fanout = 2; COMB Node = 'lpm_add_sub0:inst8|lpm_add_sub:lpm_add_sub_component|add_sub_2ph:auto_generated|op_1~22'
-        Info: 4: + IC(0.000 ns) + CELL(0.125 ns) = 6.065 ns; Loc. = LCCOMB_X34_Y3_N28; Fanout = 1; COMB Node = 'lpm_add_sub0:inst8|lpm_add_sub:lpm_add_sub_component|add_sub_2ph:auto_generated|op_1~25'
-        Info: 5: + IC(0.253 ns) + CELL(0.154 ns) = 6.472 ns; Loc. = LCCOMB_X34_Y3_N4; Fanout = 1; COMB Node = 'data~2'
-        Info: 6: + IC(1.047 ns) + CELL(0.357 ns) = 7.876 ns; Loc. = LCCOMB_X25_Y1_N16; Fanout = 1; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6]'
-        Info: Total cell delay = 1.779 ns ( 22.59 % )
-        Info: Total interconnect delay = 6.097 ns ( 77.41 % )
-    Info: + Micro setup delay of destination is 0.501 ns
-    Info: - Shortest clock path from clock "nor" to destination register is 4.391 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U5; Fanout = 2; CLK Node = 'nor'
-        Info: 2: + IC(1.035 ns) + CELL(0.228 ns) = 2.073 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-        Info: 3: + IC(1.371 ns) + CELL(0.000 ns) = 3.444 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-        Info: 4: + IC(0.894 ns) + CELL(0.053 ns) = 4.391 ns; Loc. = LCCOMB_X25_Y1_N16; Fanout = 1; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[6]'
-        Info: Total cell delay = 1.091 ns ( 24.85 % )
-        Info: Total interconnect delay = 3.300 ns ( 75.15 % )
-Info: tco from clock "sla" to destination pin "sf" through register "lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]" is 11.095 ns
-    Info: + Longest clock path from clock "sla" to source register is 4.934 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA5; Fanout = 2; CLK Node = 'sla'
-        Info: 2: + IC(1.081 ns) + CELL(0.225 ns) = 2.163 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-        Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.438 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-        Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.809 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-        Info: 5: + IC(0.900 ns) + CELL(0.225 ns) = 4.934 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-        Info: Total cell delay = 1.360 ns ( 27.56 % )
-        Info: Total interconnect delay = 3.574 ns ( 72.44 % )
-    Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Longest register to pin delay is 6.161 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X34_Y3_N12; Fanout = 2; REG Node = 'lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[0]'
-        Info: 2: + IC(4.219 ns) + CELL(1.942 ns) = 6.161 ns; Loc. = PIN_H16; Fanout = 0; PIN Node = 'sf'
-        Info: Total cell delay = 1.942 ns ( 31.52 % )
-        Info: Total interconnect delay = 4.219 ns ( 68.48 % )
-Info: th for register "lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4]" (data pin = "nand", clock pin = "sla") is 1.789 ns
-    Info: + Longest clock path from clock "sla" to destination register is 4.755 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA5; Fanout = 2; CLK Node = 'sla'
-        Info: 2: + IC(1.081 ns) + CELL(0.225 ns) = 2.163 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-        Info: 3: + IC(0.222 ns) + CELL(0.053 ns) = 2.438 ns; Loc. = LCCOMB_X29_Y4_N8; Fanout = 1; COMB Node = 'inst24'
-        Info: 4: + IC(1.371 ns) + CELL(0.000 ns) = 3.809 ns; Loc. = CLKCTRL_G5; Fanout = 9; COMB Node = 'inst24~clkctrl'
-        Info: 5: + IC(0.893 ns) + CELL(0.053 ns) = 4.755 ns; Loc. = LCCOMB_X29_Y4_N16; Fanout = 1; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4]'
-        Info: Total cell delay = 1.188 ns ( 24.98 % )
-        Info: Total interconnect delay = 3.567 ns ( 75.02 % )
-    Info: + Micro hold delay of destination is 0.000 ns
-    Info: - Shortest pin to register delay is 2.966 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_U4; Fanout = 3; CLK Node = 'nand'
-        Info: 2: + IC(1.024 ns) + CELL(0.053 ns) = 1.887 ns; Loc. = LCCOMB_X29_Y4_N0; Fanout = 8; COMB Node = 'inst24~0'
-        Info: 3: + IC(0.377 ns) + CELL(0.272 ns) = 2.536 ns; Loc. = LCCOMB_X29_Y4_N6; Fanout = 1; COMB Node = 'data~4'
-        Info: 4: + IC(0.205 ns) + CELL(0.225 ns) = 2.966 ns; Loc. = LCCOMB_X29_Y4_N16; Fanout = 1; REG Node = 'lpm_latch2:inst5|lpm_latch:lpm_latch_component|latches[4]'
-        Info: Total cell delay = 1.360 ns ( 45.85 % )
-        Info: Total interconnect delay = 1.606 ns ( 54.15 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 12 warnings
+        Info: + Longest register to register delay is 0.750 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+            Info: 2: + IC(0.000 ns) + CELL(0.458 ns) = 0.458 ns; Loc. = LCCOMB_X18_Y1_N16; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0~COUT'
+            Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 0.493 ns; Loc. = LCCOMB_X18_Y1_N18; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1~COUT'
+            Info: 4: + IC(0.000 ns) + CELL(0.035 ns) = 0.528 ns; Loc. = LCCOMB_X18_Y1_N20; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita2~COUT'
+            Info: 5: + IC(0.000 ns) + CELL(0.125 ns) = 0.653 ns; Loc. = LCCOMB_X18_Y1_N22; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita3'
+            Info: 6: + IC(0.000 ns) + CELL(0.097 ns) = 0.750 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+            Info: Total cell delay = 0.750 ns ( 100.00 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "clk" to destination register is 4.602 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_W4; Fanout = 1; CLK Node = 'clk'
+                Info: 2: + IC(1.179 ns) + CELL(0.272 ns) = 2.271 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.340 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.602 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+                Info: Total cell delay = 1.710 ns ( 37.16 % )
+                Info: Total interconnect delay = 2.892 ns ( 62.84 % )
+            Info: - Longest clock path from clock "clk" to source register is 4.602 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_W4; Fanout = 1; CLK Node = 'clk'
+                Info: 2: + IC(1.179 ns) + CELL(0.272 ns) = 2.271 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+                Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.340 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+                Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.602 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+                Info: Total cell delay = 1.710 ns ( 37.16 % )
+                Info: Total interconnect delay = 2.892 ns ( 62.84 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]" (data pin = "push", clock pin = "push") is 1.036 ns
+    Info: + Longest pin to register delay is 5.082 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_AB13; Fanout = 6; CLK Node = 'push'
+        Info: 2: + IC(3.707 ns) + CELL(0.309 ns) = 4.825 ns; Loc. = LCCOMB_X18_Y1_N18; Fanout = 2; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1~COUT'
+        Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 4.860 ns; Loc. = LCCOMB_X18_Y1_N20; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita2~COUT'
+        Info: 4: + IC(0.000 ns) + CELL(0.125 ns) = 4.985 ns; Loc. = LCCOMB_X18_Y1_N22; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita3'
+        Info: 5: + IC(0.000 ns) + CELL(0.097 ns) = 5.082 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.375 ns ( 27.06 % )
+        Info: Total interconnect delay = 3.707 ns ( 72.94 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "push" to destination register is 4.136 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_AB13; Fanout = 6; CLK Node = 'push'
+        Info: 2: + IC(0.842 ns) + CELL(0.154 ns) = 1.805 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+        Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 2.874 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+        Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.136 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.581 ns ( 38.23 % )
+        Info: Total interconnect delay = 2.555 ns ( 61.77 % )
+Info: tco from clock "clk" to destination pin "sp[0]" through register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]" is 8.421 ns
+    Info: + Longest clock path from clock "clk" to source register is 4.602 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_W4; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(1.179 ns) + CELL(0.272 ns) = 2.271 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+        Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.340 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+        Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.602 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+        Info: Total cell delay = 1.710 ns ( 37.16 % )
+        Info: Total interconnect delay = 2.892 ns ( 62.84 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 3.725 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 3; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]'
+        Info: 2: + IC(1.591 ns) + CELL(2.134 ns) = 3.725 ns; Loc. = PIN_T19; Fanout = 0; PIN Node = 'sp[0]'
+        Info: Total cell delay = 2.134 ns ( 57.29 % )
+        Info: Total interconnect delay = 1.591 ns ( 42.71 % )
+Info: th for register "lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]" (data pin = "push", clock pin = "clk") is -0.232 ns
+    Info: + Longest clock path from clock "clk" to destination register is 4.602 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_W4; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(1.179 ns) + CELL(0.272 ns) = 2.271 ns; Loc. = LCCOMB_X18_Y1_N28; Fanout = 1; COMB Node = 'inst'
+        Info: 3: + IC(1.069 ns) + CELL(0.000 ns) = 3.340 ns; Loc. = CLKCTRL_G5; Fanout = 4; COMB Node = 'inst~clkctrl'
+        Info: 4: + IC(0.644 ns) + CELL(0.618 ns) = 4.602 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.710 ns ( 37.16 % )
+        Info: Total interconnect delay = 2.892 ns ( 62.84 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.983 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.809 ns) = 0.809 ns; Loc. = PIN_AB13; Fanout = 6; CLK Node = 'push'
+        Info: 2: + IC(3.706 ns) + CELL(0.371 ns) = 4.886 ns; Loc. = LCCOMB_X18_Y1_N22; Fanout = 1; COMB Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita3'
+        Info: 3: + IC(0.000 ns) + CELL(0.097 ns) = 4.983 ns; Loc. = LCFF_X18_Y1_N23; Fanout = 2; REG Node = 'lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.277 ns ( 25.63 % )
+        Info: Total interconnect delay = 3.706 ns ( 74.37 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Sun May 13 23:44:08 2018
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon May 14 00:31:05 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
