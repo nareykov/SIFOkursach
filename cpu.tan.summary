@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.036 ns
-From           : push
-To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+Actual Time    : 2.975 ns
+From           : data[2]
+To             : lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[2]
 From Clock     : --
 To Clock       : push
 Failed Paths   : 0
@@ -15,52 +15,92 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.421 ns
-From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
-To             : sp[0]
-From Clock     : clk
+Actual Time    : 16.067 ns
+From           : lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[3]
+To             : out[3]
+From Clock     : push
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.723 ns
+From           : pop
+To             : out[6]
+From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.232 ns
-From           : push
-To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+Actual Time    : 7.148 ns
+From           : data[0]
+To             : lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[0]
 From Clock     : --
-To Clock       : clk
-Failed Paths   : 0
-
-Type           : Clock Setup: 'clk'
-Slack          : N/A
-Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
-To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
-From Clock     : clk
-To Clock       : clk
-Failed Paths   : 0
-
-Type           : Clock Setup: 'push'
-Slack          : N/A
-Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
-To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
-From Clock     : push
 To Clock       : push
 Failed Paths   : 0
 
 Type           : Clock Setup: 'pop'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+Actual Time    : 345.30 MHz ( period = 2.896 ns )
 From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
-To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
 From Clock     : pop
 To Clock       : pop
 Failed Paths   : 0
+
+Type           : Clock Setup: 'push'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 345.30 MHz ( period = 2.896 ns )
+From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
+From Clock     : push
+To Clock       : push
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 345.30 MHz ( period = 2.896 ns )
+From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 1
+
+Type           : Clock Hold: 'push'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+From Clock     : push
+To Clock       : push
+Failed Paths   : 1
+
+Type           : Clock Hold: 'pop'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]
+To             : lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[3]
+From Clock     : pop
+To Clock       : pop
+Failed Paths   : 1
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +110,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 3
 
 --------------------------------------------------------------------------------------
 

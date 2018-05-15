@@ -1,5 +1,5 @@
 Simulator report for cpu
-Mon May 14 00:33:15 2018
+Tue May 15 17:32:56 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 34 nodes     ;
-; Simulation Coverage         ;      62.07 % ;
-; Total Number of Transitions ; 419          ;
+; Simulation Netlist Size     ; 301 nodes    ;
+; Simulation Coverage         ;      44.74 % ;
+; Total Number of Transitions ; 2055         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      62.07 % ;
-; Total nodes checked                                 ; 34           ;
-; Total output ports checked                          ; 29           ;
-; Total output ports with complete 1/0-value coverage ; 18           ;
-; Total output ports with no 1/0-value coverage       ; 9            ;
-; Total output ports with no 1-value coverage         ; 11           ;
-; Total output ports with no 0-value coverage         ; 9            ;
+; Total coverage as a percentage                      ;      44.74 % ;
+; Total nodes checked                                 ; 301          ;
+; Total output ports checked                          ; 304          ;
+; Total output ports with complete 1/0-value coverage ; 136          ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 145          ;
+; Total output ports with no 0-value coverage         ; 27           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -114,9 +114,125 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |STACK|sp[2]                                                                                             ; |STACK|sp[2]                                                                                                ; pin_out          ;
 ; |STACK|sp[1]                                                                                             ; |STACK|sp[1]                                                                                                ; pin_out          ;
 ; |STACK|sp[0]                                                                                             ; |STACK|sp[0]                                                                                                ; pin_out          ;
-; |STACK|inst                                                                                              ; |STACK|inst                                                                                                 ; out0             ;
+; |STACK|inst12                                                                                            ; |STACK|inst12                                                                                               ; out0             ;
 ; |STACK|clk                                                                                               ; |STACK|clk                                                                                                  ; out              ;
+; |STACK|inst1                                                                                             ; |STACK|inst1                                                                                                ; out0             ;
+; |STACK|inst14                                                                                            ; |STACK|inst14                                                                                               ; out0             ;
 ; |STACK|pop                                                                                               ; |STACK|pop                                                                                                  ; out              ;
+; |STACK|full                                                                                              ; |STACK|full                                                                                                 ; pin_out          ;
+; |STACK|out[3]                                                                                            ; |STACK|out[3]                                                                                               ; pin_out          ;
+; |STACK|out[2]                                                                                            ; |STACK|out[2]                                                                                               ; pin_out          ;
+; |STACK|out[1]                                                                                            ; |STACK|out[1]                                                                                               ; pin_out          ;
+; |STACK|out[0]                                                                                            ; |STACK|out[0]                                                                                               ; pin_out          ;
+; |STACK|inst53[3]                                                                                         ; |STACK|inst53[3]                                                                                            ; out              ;
+; |STACK|inst53[2]                                                                                         ; |STACK|inst53[2]                                                                                            ; out              ;
+; |STACK|inst53[1]                                                                                         ; |STACK|inst53[1]                                                                                            ; out              ;
+; |STACK|inst53[0]                                                                                         ; |STACK|inst53[0]                                                                                            ; out              ;
+; |STACK|IN~4                                                                                              ; |STACK|IN~4                                                                                                 ; out0             ;
+; |STACK|IN~5                                                                                              ; |STACK|IN~5                                                                                                 ; out0             ;
+; |STACK|IN~6                                                                                              ; |STACK|IN~6                                                                                                 ; out0             ;
+; |STACK|IN~7                                                                                              ; |STACK|IN~7                                                                                                 ; out0             ;
+; |STACK|inst23                                                                                            ; |STACK|inst23                                                                                               ; out0             ;
+; |STACK|inst16                                                                                            ; |STACK|inst16                                                                                               ; out0             ;
+; |STACK|data[3]                                                                                           ; |STACK|data[3]                                                                                              ; out              ;
+; |STACK|data[2]                                                                                           ; |STACK|data[2]                                                                                              ; out              ;
+; |STACK|data[1]                                                                                           ; |STACK|data[1]                                                                                              ; out              ;
+; |STACK|data[0]                                                                                           ; |STACK|data[0]                                                                                              ; out              ;
+; |STACK|inst42[1]                                                                                         ; |STACK|inst42[1]                                                                                            ; out              ;
+; |STACK|inst42[0]                                                                                         ; |STACK|inst42[0]                                                                                            ; out              ;
+; |STACK|inst24                                                                                            ; |STACK|inst24                                                                                               ; out0             ;
+; |STACK|inst43[0]                                                                                         ; |STACK|inst43[0]                                                                                            ; out              ;
+; |STACK|inst25                                                                                            ; |STACK|inst25                                                                                               ; out0             ;
+; |STACK|inst44[3]                                                                                         ; |STACK|inst44[3]                                                                                            ; out              ;
+; |STACK|inst44[2]                                                                                         ; |STACK|inst44[2]                                                                                            ; out              ;
+; |STACK|inst44[1]                                                                                         ; |STACK|inst44[1]                                                                                            ; out              ;
+; |STACK|inst44[0]                                                                                         ; |STACK|inst44[0]                                                                                            ; out              ;
+; |STACK|inst26                                                                                            ; |STACK|inst26                                                                                               ; out0             ;
+; |STACK|inst45[0]                                                                                         ; |STACK|inst45[0]                                                                                            ; out              ;
+; |STACK|inst27                                                                                            ; |STACK|inst27                                                                                               ; out0             ;
+; |STACK|inst46[1]                                                                                         ; |STACK|inst46[1]                                                                                            ; out              ;
+; |STACK|inst46[0]                                                                                         ; |STACK|inst46[0]                                                                                            ; out              ;
+; |STACK|inst28                                                                                            ; |STACK|inst28                                                                                               ; out0             ;
+; |STACK|inst47[0]                                                                                         ; |STACK|inst47[0]                                                                                            ; out              ;
+; |STACK|inst30                                                                                            ; |STACK|inst30                                                                                               ; out0             ;
+; |STACK|inst48[3]                                                                                         ; |STACK|inst48[3]                                                                                            ; out              ;
+; |STACK|inst48[2]                                                                                         ; |STACK|inst48[2]                                                                                            ; out              ;
+; |STACK|inst48[1]                                                                                         ; |STACK|inst48[1]                                                                                            ; out              ;
+; |STACK|inst48[0]                                                                                         ; |STACK|inst48[0]                                                                                            ; out              ;
+; |STACK|inst32                                                                                            ; |STACK|inst32                                                                                               ; out0             ;
+; |STACK|inst49[0]                                                                                         ; |STACK|inst49[0]                                                                                            ; out              ;
+; |STACK|inst34                                                                                            ; |STACK|inst34                                                                                               ; out0             ;
+; |STACK|inst50[1]                                                                                         ; |STACK|inst50[1]                                                                                            ; out              ;
+; |STACK|inst50[0]                                                                                         ; |STACK|inst50[0]                                                                                            ; out              ;
+; |STACK|inst36                                                                                            ; |STACK|inst36                                                                                               ; out0             ;
+; |STACK|inst51[0]                                                                                         ; |STACK|inst51[0]                                                                                            ; out              ;
+; |STACK|inst38                                                                                            ; |STACK|inst38                                                                                               ; out0             ;
+; |STACK|inst52[2]                                                                                         ; |STACK|inst52[2]                                                                                            ; out              ;
+; |STACK|inst52[1]                                                                                         ; |STACK|inst52[1]                                                                                            ; out              ;
+; |STACK|inst52[0]                                                                                         ; |STACK|inst52[0]                                                                                            ; out              ;
+; |STACK|inst40                                                                                            ; |STACK|inst40                                                                                               ; out0             ;
+; |STACK|inst55                                                                                            ; |STACK|inst55                                                                                               ; out0             ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[2]                                        ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[2]                                           ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[3]                                        ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[3]                                           ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[2]                                        ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[2]                                           ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[3]                                        ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[3]                                           ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[2]                                        ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[2]                                           ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[1]                                        ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[1]                                           ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[0]                                        ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[0]                                           ; out              ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[3]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[3]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[2]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[2]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[1]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode102w[1]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[3]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[3]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[2]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[2]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[1]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode112w[1]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[3]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[3]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[2]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[2]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[1]       ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode122w[1]          ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode21w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode31w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode41w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[3]         ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[3]            ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[2]         ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[2]            ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[1]         ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode4w[1]            ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode61w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode71w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode81w[1]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[3]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[3]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[2]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[2]           ; out0             ;
+; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[1]        ; |STACK|lpm_decode2:inst18|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode91w[1]           ; out0             ;
+; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|aneb_result_wire[0]  ; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|aneb_result_wire[0]     ; out0             ;
+; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[1]         ; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[1]            ; out0             ;
+; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[0]         ; |STACK|lpm_compare2:inst8|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[0]            ; out0             ;
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0   ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0      ; sumout           ;
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0   ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita0~COUT ; cout             ;
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1   ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_comb_bita1      ; sumout           ;
@@ -128,45 +244,199 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_reg_bit1a[2] ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[2]               ; regout           ;
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_reg_bit1a[1] ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[1]               ; regout           ;
 ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|counter_reg_bit1a[0] ; |STACK|lpm_counter2:inst4|lpm_counter:lpm_counter_component|cntr_5dg:auto_generated|safe_q[0]               ; regout           ;
+; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[1]          ; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[1]             ; out0             ;
+; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[0]          ; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|data_wire[0]             ; out0             ;
 +----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------------+
-; Missing 1-Value Coverage                              ;
-+-----------------+------------------+------------------+
-; Node Name       ; Output Port Name ; Output Port Type ;
-+-----------------+------------------+------------------+
-; |STACK|overflow ; |STACK|overflow  ; pin_out          ;
-; |STACK|out[7]   ; |STACK|out[7]    ; pin_out          ;
-; |STACK|out[6]   ; |STACK|out[6]    ; pin_out          ;
-; |STACK|out[5]   ; |STACK|out[5]    ; pin_out          ;
-; |STACK|out[4]   ; |STACK|out[4]    ; pin_out          ;
-; |STACK|out[3]   ; |STACK|out[3]    ; pin_out          ;
-; |STACK|out[2]   ; |STACK|out[2]    ; pin_out          ;
-; |STACK|out[1]   ; |STACK|out[1]    ; pin_out          ;
-; |STACK|out[0]   ; |STACK|out[0]    ; pin_out          ;
-; |STACK|push     ; |STACK|push      ; out              ;
-; |STACK|inst1    ; |STACK|inst1     ; out0             ;
-+-----------------+------------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                              ; Output Port Name                                                                                       ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |STACK|push                                                                                            ; |STACK|push                                                                                            ; out              ;
+; |STACK|inst13                                                                                          ; |STACK|inst13                                                                                          ; out0             ;
+; |STACK|out[7]                                                                                          ; |STACK|out[7]                                                                                          ; pin_out          ;
+; |STACK|out[6]                                                                                          ; |STACK|out[6]                                                                                          ; pin_out          ;
+; |STACK|out[5]                                                                                          ; |STACK|out[5]                                                                                          ; pin_out          ;
+; |STACK|out[4]                                                                                          ; |STACK|out[4]                                                                                          ; pin_out          ;
+; |STACK|inst53[7]                                                                                       ; |STACK|inst53[7]                                                                                       ; out              ;
+; |STACK|inst53[6]                                                                                       ; |STACK|inst53[6]                                                                                       ; out              ;
+; |STACK|inst53[5]                                                                                       ; |STACK|inst53[5]                                                                                       ; out              ;
+; |STACK|inst53[4]                                                                                       ; |STACK|inst53[4]                                                                                       ; out              ;
+; |STACK|IN~0                                                                                            ; |STACK|IN~0                                                                                            ; out0             ;
+; |STACK|IN~1                                                                                            ; |STACK|IN~1                                                                                            ; out0             ;
+; |STACK|IN~2                                                                                            ; |STACK|IN~2                                                                                            ; out0             ;
+; |STACK|IN~3                                                                                            ; |STACK|IN~3                                                                                            ; out0             ;
+; |STACK|inst41[7]                                                                                       ; |STACK|inst41[7]                                                                                       ; out              ;
+; |STACK|inst41[6]                                                                                       ; |STACK|inst41[6]                                                                                       ; out              ;
+; |STACK|inst41[5]                                                                                       ; |STACK|inst41[5]                                                                                       ; out              ;
+; |STACK|inst41[4]                                                                                       ; |STACK|inst41[4]                                                                                       ; out              ;
+; |STACK|inst41[3]                                                                                       ; |STACK|inst41[3]                                                                                       ; out              ;
+; |STACK|inst41[2]                                                                                       ; |STACK|inst41[2]                                                                                       ; out              ;
+; |STACK|inst41[1]                                                                                       ; |STACK|inst41[1]                                                                                       ; out              ;
+; |STACK|data[7]                                                                                         ; |STACK|data[7]                                                                                         ; out              ;
+; |STACK|data[6]                                                                                         ; |STACK|data[6]                                                                                         ; out              ;
+; |STACK|data[5]                                                                                         ; |STACK|data[5]                                                                                         ; out              ;
+; |STACK|data[4]                                                                                         ; |STACK|data[4]                                                                                         ; out              ;
+; |STACK|inst42[7]                                                                                       ; |STACK|inst42[7]                                                                                       ; out              ;
+; |STACK|inst42[6]                                                                                       ; |STACK|inst42[6]                                                                                       ; out              ;
+; |STACK|inst42[5]                                                                                       ; |STACK|inst42[5]                                                                                       ; out              ;
+; |STACK|inst42[4]                                                                                       ; |STACK|inst42[4]                                                                                       ; out              ;
+; |STACK|inst42[3]                                                                                       ; |STACK|inst42[3]                                                                                       ; out              ;
+; |STACK|inst42[2]                                                                                       ; |STACK|inst42[2]                                                                                       ; out              ;
+; |STACK|inst43[7]                                                                                       ; |STACK|inst43[7]                                                                                       ; out              ;
+; |STACK|inst43[6]                                                                                       ; |STACK|inst43[6]                                                                                       ; out              ;
+; |STACK|inst43[5]                                                                                       ; |STACK|inst43[5]                                                                                       ; out              ;
+; |STACK|inst43[4]                                                                                       ; |STACK|inst43[4]                                                                                       ; out              ;
+; |STACK|inst43[3]                                                                                       ; |STACK|inst43[3]                                                                                       ; out              ;
+; |STACK|inst43[2]                                                                                       ; |STACK|inst43[2]                                                                                       ; out              ;
+; |STACK|inst44[7]                                                                                       ; |STACK|inst44[7]                                                                                       ; out              ;
+; |STACK|inst44[6]                                                                                       ; |STACK|inst44[6]                                                                                       ; out              ;
+; |STACK|inst44[5]                                                                                       ; |STACK|inst44[5]                                                                                       ; out              ;
+; |STACK|inst44[4]                                                                                       ; |STACK|inst44[4]                                                                                       ; out              ;
+; |STACK|inst45[7]                                                                                       ; |STACK|inst45[7]                                                                                       ; out              ;
+; |STACK|inst45[6]                                                                                       ; |STACK|inst45[6]                                                                                       ; out              ;
+; |STACK|inst45[5]                                                                                       ; |STACK|inst45[5]                                                                                       ; out              ;
+; |STACK|inst45[4]                                                                                       ; |STACK|inst45[4]                                                                                       ; out              ;
+; |STACK|inst45[3]                                                                                       ; |STACK|inst45[3]                                                                                       ; out              ;
+; |STACK|inst45[1]                                                                                       ; |STACK|inst45[1]                                                                                       ; out              ;
+; |STACK|inst46[7]                                                                                       ; |STACK|inst46[7]                                                                                       ; out              ;
+; |STACK|inst46[6]                                                                                       ; |STACK|inst46[6]                                                                                       ; out              ;
+; |STACK|inst46[5]                                                                                       ; |STACK|inst46[5]                                                                                       ; out              ;
+; |STACK|inst46[4]                                                                                       ; |STACK|inst46[4]                                                                                       ; out              ;
+; |STACK|inst46[3]                                                                                       ; |STACK|inst46[3]                                                                                       ; out              ;
+; |STACK|inst47[7]                                                                                       ; |STACK|inst47[7]                                                                                       ; out              ;
+; |STACK|inst47[6]                                                                                       ; |STACK|inst47[6]                                                                                       ; out              ;
+; |STACK|inst47[5]                                                                                       ; |STACK|inst47[5]                                                                                       ; out              ;
+; |STACK|inst47[4]                                                                                       ; |STACK|inst47[4]                                                                                       ; out              ;
+; |STACK|inst47[3]                                                                                       ; |STACK|inst47[3]                                                                                       ; out              ;
+; |STACK|inst48[7]                                                                                       ; |STACK|inst48[7]                                                                                       ; out              ;
+; |STACK|inst48[6]                                                                                       ; |STACK|inst48[6]                                                                                       ; out              ;
+; |STACK|inst48[5]                                                                                       ; |STACK|inst48[5]                                                                                       ; out              ;
+; |STACK|inst48[4]                                                                                       ; |STACK|inst48[4]                                                                                       ; out              ;
+; |STACK|inst49[7]                                                                                       ; |STACK|inst49[7]                                                                                       ; out              ;
+; |STACK|inst49[6]                                                                                       ; |STACK|inst49[6]                                                                                       ; out              ;
+; |STACK|inst49[5]                                                                                       ; |STACK|inst49[5]                                                                                       ; out              ;
+; |STACK|inst49[4]                                                                                       ; |STACK|inst49[4]                                                                                       ; out              ;
+; |STACK|inst49[2]                                                                                       ; |STACK|inst49[2]                                                                                       ; out              ;
+; |STACK|inst49[1]                                                                                       ; |STACK|inst49[1]                                                                                       ; out              ;
+; |STACK|inst50[7]                                                                                       ; |STACK|inst50[7]                                                                                       ; out              ;
+; |STACK|inst50[6]                                                                                       ; |STACK|inst50[6]                                                                                       ; out              ;
+; |STACK|inst50[5]                                                                                       ; |STACK|inst50[5]                                                                                       ; out              ;
+; |STACK|inst50[4]                                                                                       ; |STACK|inst50[4]                                                                                       ; out              ;
+; |STACK|inst50[2]                                                                                       ; |STACK|inst50[2]                                                                                       ; out              ;
+; |STACK|inst51[7]                                                                                       ; |STACK|inst51[7]                                                                                       ; out              ;
+; |STACK|inst51[6]                                                                                       ; |STACK|inst51[6]                                                                                       ; out              ;
+; |STACK|inst51[5]                                                                                       ; |STACK|inst51[5]                                                                                       ; out              ;
+; |STACK|inst51[4]                                                                                       ; |STACK|inst51[4]                                                                                       ; out              ;
+; |STACK|inst51[2]                                                                                       ; |STACK|inst51[2]                                                                                       ; out              ;
+; |STACK|inst52[7]                                                                                       ; |STACK|inst52[7]                                                                                       ; out              ;
+; |STACK|inst52[6]                                                                                       ; |STACK|inst52[6]                                                                                       ; out              ;
+; |STACK|inst52[5]                                                                                       ; |STACK|inst52[5]                                                                                       ; out              ;
+; |STACK|inst52[4]                                                                                       ; |STACK|inst52[4]                                                                                       ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[1]                                      ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[1]                                      ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst31|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[1]                                      ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[1]                                      ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst20|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst17|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[7]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[7]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[6]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[6]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[5]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[5]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[4]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[4]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[3]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[3]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[2]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[2]                                      ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[1]                                      ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[1]                                      ; out              ;
+; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|aneb_result_wire[0] ; |STACK|lpm_compare3:inst|lpm_compare:lpm_compare_component|cmpr_i8j:auto_generated|aneb_result_wire[0] ; out0             ;
++--------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------------+
-; Missing 0-Value Coverage                              ;
-+-----------------+------------------+------------------+
-; Node Name       ; Output Port Name ; Output Port Type ;
-+-----------------+------------------+------------------+
-; |STACK|overflow ; |STACK|overflow  ; pin_out          ;
-; |STACK|out[7]   ; |STACK|out[7]    ; pin_out          ;
-; |STACK|out[6]   ; |STACK|out[6]    ; pin_out          ;
-; |STACK|out[5]   ; |STACK|out[5]    ; pin_out          ;
-; |STACK|out[4]   ; |STACK|out[4]    ; pin_out          ;
-; |STACK|out[3]   ; |STACK|out[3]    ; pin_out          ;
-; |STACK|out[2]   ; |STACK|out[2]    ; pin_out          ;
-; |STACK|out[1]   ; |STACK|out[1]    ; pin_out          ;
-; |STACK|out[0]   ; |STACK|out[0]    ; pin_out          ;
-+-----------------+------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |STACK|empty                                                      ; |STACK|empty                                                      ; pin_out          ;
+; |STACK|inst41[0]                                                  ; |STACK|inst41[0]                                                  ; out              ;
+; |STACK|data[7]                                                    ; |STACK|data[7]                                                    ; out              ;
+; |STACK|data[6]                                                    ; |STACK|data[6]                                                    ; out              ;
+; |STACK|data[5]                                                    ; |STACK|data[5]                                                    ; out              ;
+; |STACK|data[4]                                                    ; |STACK|data[4]                                                    ; out              ;
+; |STACK|inst43[1]                                                  ; |STACK|inst43[1]                                                  ; out              ;
+; |STACK|inst45[2]                                                  ; |STACK|inst45[2]                                                  ; out              ;
+; |STACK|inst46[2]                                                  ; |STACK|inst46[2]                                                  ; out              ;
+; |STACK|inst47[2]                                                  ; |STACK|inst47[2]                                                  ; out              ;
+; |STACK|inst47[1]                                                  ; |STACK|inst47[1]                                                  ; out              ;
+; |STACK|inst49[3]                                                  ; |STACK|inst49[3]                                                  ; out              ;
+; |STACK|inst50[3]                                                  ; |STACK|inst50[3]                                                  ; out              ;
+; |STACK|inst51[3]                                                  ; |STACK|inst51[3]                                                  ; out              ;
+; |STACK|inst51[1]                                                  ; |STACK|inst51[1]                                                  ; out              ;
+; |STACK|inst52[3]                                                  ; |STACK|inst52[3]                                                  ; out              ;
+; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[3] ; |STACK|lpm_latch4:inst39|lpm_latch:lpm_latch_component|latches[3] ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[3] ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[3] ; out              ;
+; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[1] ; |STACK|lpm_latch4:inst37|lpm_latch:lpm_latch_component|latches[1] ; out              ;
+; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[3] ; |STACK|lpm_latch4:inst35|lpm_latch:lpm_latch_component|latches[3] ; out              ;
+; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[3] ; |STACK|lpm_latch4:inst33|lpm_latch:lpm_latch_component|latches[3] ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[2] ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[2] ; out              ;
+; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[1] ; |STACK|lpm_latch4:inst29|lpm_latch:lpm_latch_component|latches[1] ; out              ;
+; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[2] ; |STACK|lpm_latch4:inst22|lpm_latch:lpm_latch_component|latches[2] ; out              ;
+; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[2] ; |STACK|lpm_latch4:inst21|lpm_latch:lpm_latch_component|latches[2] ; out              ;
+; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[1] ; |STACK|lpm_latch4:inst19|lpm_latch:lpm_latch_component|latches[1] ; out              ;
+; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[0] ; |STACK|lpm_latch4:inst15|lpm_latch:lpm_latch_component|latches[0] ; out              ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -182,18 +452,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Mon May 14 00:33:14 2018
+    Info: Processing started: Tue May 15 17:32:56 2018
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off cpu -c cpu
 Info: Using vector source file "C:/Users/narey/Desktop/сифо/SIFOkursach/STACK.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "overflow" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      62.07 %
-Info: Number of transitions in simulation is 419
-Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 195 megabytes
-    Info: Processing ended: Mon May 14 00:33:15 2018
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Simulation coverage is      44.74 %
+Info: Number of transitions in simulation is 2055
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Tue May 15 17:32:56 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 
