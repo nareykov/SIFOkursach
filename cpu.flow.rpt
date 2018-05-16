@@ -1,5 +1,5 @@
 Flow report for cpu
-Wed May 16 18:29:36 2018
+Wed May 16 19:10:34 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,14 +38,14 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Flow Summary                                                            ;
 +-------------------------------+-----------------------------------------+
-; Flow Status                   ; Successful - Wed May 16 18:29:36 2018   ;
+; Flow Status                   ; Successful - Wed May 16 19:10:34 2018   ;
 ; Quartus II Version            ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                 ; cpu                                     ;
-; Top-level Entity Name         ; CU                                      ;
+; Top-level Entity Name         ; cpu                                     ;
 ; Family                        ; Stratix II                              ;
 ; Met timing requirements       ; No                                      ;
 ; Logic utilization             ; 4 %                                     ;
-;     Combinational ALUTs       ; 416 / 12,480 ( 3 % )                    ;
+;     Combinational ALUTs       ; 415 / 12,480 ( 3 % )                    ;
 ;     Dedicated logic registers ; 16 / 12,480 ( < 1 % )                   ;
 ; Total registers               ; 16                                      ;
 ; Total pins                    ; 134 / 343 ( 39 % )                      ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/16/2018 18:28:16 ;
+; Start date & time ; 05/16/2018 19:10:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cpu                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------+---------------+-------------+------------+
 ; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id ;
 +------------------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 62000997771494.152649529626768 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID              ; 62000997771494.152649781229664 ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                       ; LPM_LATCH                      ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                       ; LPM_LATCH                      ; --            ; --          ; --         ;
@@ -178,9 +178,8 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_latch7.bsf                 ; --            ; --          ; --         ;
 ; MISC_FILE                          ; lpm_decode4.bsf                ; --            ; --          ; --         ;
 ; MISC_FILE                          ; lpm_add_sub2.bsf               ; --            ; --          ; --         ;
-; PARTITION_COLOR                    ; 14622752                       ; --            ; CU          ; Top        ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; CU          ; Top        ;
-; TOP_LEVEL_ENTITY                   ; CU                             ; cpu           ; --          ; --         ;
+; PARTITION_COLOR                    ; 14622752                       ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; --          ; Top        ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                            ; --            ; --          ; eda_palace ;
 +------------------------------------+--------------------------------+---------------+-------------+------------+
 
@@ -190,9 +189,9 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 280 MB              ; 00:00:14                           ;
+; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 280 MB              ; 00:00:14                           ;
 ; Fitter                  ; 00:00:07     ; 1.0                     ; 290 MB              ; 00:00:07                           ;
-; Assembler               ; 00:00:03     ; 1.0                     ; 254 MB              ; 00:00:02                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 254 MB              ; 00:00:02                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 187 MB              ; 00:00:01                           ;
 ; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:24                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
