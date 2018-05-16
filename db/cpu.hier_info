@@ -108,7 +108,6 @@ num[1] <= num~0.DB_MAX_OUTPUT_PORT_TYPE
 push <= inst64.DB_MAX_OUTPUT_PORT_TYPE
 pop <= inst65.DB_MAX_OUTPUT_PORT_TYPE
 alu_out <= inst83.DB_MAX_OUTPUT_PORT_TYPE
-ron_out <= inst35.DB_MAX_OUTPUT_PORT_TYPE
 write_buf2 <= inst72.DB_MAX_OUTPUT_PORT_TYPE
 write_buf1 <= inst71.DB_MAX_OUTPUT_PORT_TYPE
 alu[0] <= ALU:inst12.result[0]

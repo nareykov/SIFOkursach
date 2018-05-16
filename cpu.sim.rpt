@@ -1,5 +1,5 @@
 Simulator report for cpu
-Wed May 16 18:00:43 2018
+Wed May 16 18:29:58 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -47,8 +47,8 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 914 nodes    ;
-; Simulation Coverage         ;      63.11 % ;
+; Simulation Netlist Size     ; 905 nodes    ;
+; Simulation Coverage         ;      63.73 % ;
 ; Total Number of Transitions ; 36554        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
@@ -108,13 +108,13 @@ Please refer to fitter text-based report (*.fit.rpt) to view logical memory repo
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      63.11 % ;
-; Total nodes checked                                 ; 914          ;
-; Total output ports checked                          ; 927          ;
+; Total coverage as a percentage                      ;      63.73 % ;
+; Total nodes checked                                 ; 905          ;
+; Total output ports checked                          ; 918          ;
 ; Total output ports with complete 1/0-value coverage ; 585          ;
-; Total output ports with no 1/0-value coverage       ; 251          ;
-; Total output ports with no 1-value coverage         ; 327          ;
-; Total output ports with no 0-value coverage         ; 266          ;
+; Total output ports with no 1/0-value coverage       ; 242          ;
+; Total output ports with no 1-value coverage         ; 318          ;
+; Total output ports with no 0-value coverage         ; 257          ;
 +-----------------------------------------------------+--------------+
 
 
@@ -747,15 +747,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |CU|num~0                                                                                                          ; |CU|num~0                                                                                                         ; out0             ;
 ; |CU|inst57[1]                                                                                                      ; |CU|inst57[1]                                                                                                     ; out              ;
 ; |CU|inst58[1]                                                                                                      ; |CU|inst58[1]                                                                                                     ; out              ;
-; |CU|inst44[7]                                                                                                      ; |CU|inst44[7]                                                                                                     ; out              ;
-; |CU|inst44[6]                                                                                                      ; |CU|inst44[6]                                                                                                     ; out              ;
-; |CU|inst44[5]                                                                                                      ; |CU|inst44[5]                                                                                                     ; out              ;
-; |CU|inst44[4]                                                                                                      ; |CU|inst44[4]                                                                                                     ; out              ;
-; |CU|inst44[3]                                                                                                      ; |CU|inst44[3]                                                                                                     ; out              ;
-; |CU|inst44[2]                                                                                                      ; |CU|inst44[2]                                                                                                     ; out              ;
-; |CU|inst44[1]                                                                                                      ; |CU|inst44[1]                                                                                                     ; out              ;
-; |CU|inst44[0]                                                                                                      ; |CU|inst44[0]                                                                                                     ; out              ;
-; |CU|ron_out                                                                                                        ; |CU|ron_out                                                                                                       ; pin_out          ;
 ; |CU|sp[3]                                                                                                          ; |CU|sp[3]                                                                                                         ; pin_out          ;
 ; |CU|sp[2]                                                                                                          ; |CU|sp[2]                                                                                                         ; pin_out          ;
 ; |CU|STACK:inst17|inst53[7]                                                                                         ; |CU|STACK:inst17|inst53[7]                                                                                        ; out              ;
@@ -1062,15 +1053,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |CU|takt[10]                                                                                                       ; |CU|takt[10]                                                                                                      ; pin_out          ;
 ; |CU|takt[9]                                                                                                        ; |CU|takt[9]                                                                                                       ; pin_out          ;
 ; |CU|inst100                                                                                                        ; |CU|inst100                                                                                                       ; out0             ;
-; |CU|inst44[7]                                                                                                      ; |CU|inst44[7]                                                                                                     ; out              ;
-; |CU|inst44[6]                                                                                                      ; |CU|inst44[6]                                                                                                     ; out              ;
-; |CU|inst44[5]                                                                                                      ; |CU|inst44[5]                                                                                                     ; out              ;
-; |CU|inst44[4]                                                                                                      ; |CU|inst44[4]                                                                                                     ; out              ;
-; |CU|inst44[3]                                                                                                      ; |CU|inst44[3]                                                                                                     ; out              ;
-; |CU|inst44[2]                                                                                                      ; |CU|inst44[2]                                                                                                     ; out              ;
-; |CU|inst44[1]                                                                                                      ; |CU|inst44[1]                                                                                                     ; out              ;
-; |CU|inst44[0]                                                                                                      ; |CU|inst44[0]                                                                                                     ; out              ;
-; |CU|ron_out                                                                                                        ; |CU|ron_out                                                                                                       ; pin_out          ;
 ; |CU|sp[3]                                                                                                          ; |CU|sp[3]                                                                                                         ; pin_out          ;
 ; |CU|sp[2]                                                                                                          ; |CU|sp[2]                                                                                                         ; pin_out          ;
 ; |CU|STACK:inst17|inst53[4]                                                                                         ; |CU|STACK:inst17|inst53[4]                                                                                        ; out              ;
@@ -1336,19 +1318,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Wed May 16 18:00:42 2018
+    Info: Processing started: Wed May 16 18:29:58 2018
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off cpu -c cpu
 Info: Using vector source file "C:/Users/narey/Desktop/сифо/SIFOkursach/CU.vwf"
 Warning: Can't find node "hlt" for functional simulation. Ignored vector source file node.
+Warning: Ignored node in vector source file. Can't find corresponding node name "ron_out" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      63.11 %
+Info: Simulation coverage is      63.73 %
 Info: Number of transitions in simulation is 36554
-Info: Quartus II Simulator was successful. 0 errors, 1 warning
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 167 megabytes
-    Info: Processing ended: Wed May 16 18:00:43 2018
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed May 16 18:29:58 2018
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
